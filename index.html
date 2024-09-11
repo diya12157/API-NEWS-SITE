@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav>
+        <div class="main-nav container flex">
+            <a href="#" onclick="TopNews()" class="company-logo">
+                <img src="https://dynamic.brandcrowd.com/asset/logo/f0537464-8d74-4143-aa7f-c0c4ed17f84a/logo?logoTemplateVersion=1&v=638019178689000000&text=newsistic"
+                    alt="company-logo" id="diya"> NEWSISTIC
+            </a>
+            <div class="nav-links">
+                <ul class="flex" id="navLink">
+                    
+                </ul>
+            </div>
+            <div class="search-bar flex">
+                <input id="search-text" type="text" class="news-input" placeholder="e.g. Bollywood">
+                <button id="search-button" class="search-button">Search</button>
+                <button type="button" class="search-button" id="mode" onclick="mode()">Toggle Mode</button>
+            </div>
+        </div>
+    </nav>
+    </main>
+    <div id="form">
+
+        <form name="form" method="get">
+            <h1>Prefrences</h1>
+       
+           
+                <input id="Technology" type="checkbox" name="topic" value="Technology">
+                <label for="Technology">Technology</label><br>
+
+                <input id="Science" type="checkbox" name="topic" value="Science">
+                <label for="Science">Science</label><br>
+
+                <input id="HealthWellness" type="checkbox" name="topic" value="Health&Wellness">
+                <label for="HealthWellness">Health & Wellness</label><br>
+
+                <input id="BusinessFinance" type="checkbox" name="topic" value="Business&Finance">
+                <label for="BusinessFinance">Business & Finance</label><br>
+
+                <input id="Sports" type="checkbox" name="topic" value="Sports">
+                <label for="Sports">Sports</label><br>
+
+                <input id="Entertainment" type="checkbox" name="topic" value="Entertainment">
+                <label for="Entertainment">Entertainment</label><br>
+
+                <input id="Politics" type="checkbox" name="topic" value="Politics">
+                <label for="Politics">Politics</label><br>
+
+                <input id="EnvironmentSustainability" type="checkbox" name="topic" value="Environment&Sustainability">
+                <label for="EnvironmentSustainability">Environment & Sustainability</label><br>
+
+                <input id="TravelAdventure" type="checkbox" name="topic" value="Travel&Adventure">
+                <label for="TravelAdventure">Travel & Adventure</label><br>
+
+                <input id="ArtCulture" type="checkbox" name="topic" value="Art&Culture">
+                <label for="ArtCulture">Art & Culture</label><br>
+
+                <input id="FoodCooking" type="checkbox" name="topic" value="Food&Cooking">
+                <label for="FoodCooking">Food & Cooking</label><br>
+
+                <input id="FashionStyle" type="checkbox" name="topic" value="Fashion&Style">
+                <label for="FashionStyle">Fashion & Style</label><br>
+
+                <input id="EducationLearning" type="checkbox" name="topic" value="Education&Learning">
+                <label for="EducationLearning">Education & Learning</label><br>
+
+                <input id="LifestyleTrends" type="checkbox" name="topic" value="Lifestyle&Trends">
+                <label for="LifestyleTrends">Lifestyle & Trends</label><br>
+
+                <input id="AutomotiveTransport" type="checkbox" name="topic" value="Automotive&Transport">
+                <label for="AutomotiveTransport">Automotive & Transport</label><br>
+<button type="button" class="search-button" onclick="verifyForm()">Submit</button>
+        
+
+            </form>
+    </div>
+
+
+
+    <main>
+        
+        <div class="cards-container container flex" id="cards-container">
+
+        </div>
+        <template id="template-news-card">
+            <div class="card">
+                <div class="card-header">
+                    <img src="https://via.placeholder.com/400x200" alt="news-image" id="news-img">
+                </div>
+                <div class="card-content">
+                    <h3 id="news-title">This is the Title</h3>
+                    <h6 class="news-source" id="news-source">End Gadget 26/08/2023</h6>
+                    <p class="news-desc" id="news-desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                        Recusandae saepe quis voluptatum quisquam vitae doloremque facilis molestias quae ratione
+                        cumque!</p>
+                </div>
+            </div>
+        </template>
+
+        <script src="script.js"></script>
+</body>
+
+
+<footer class="footer">
+
+    <ul class="social-icon">
+        <li class="social-icon__item"><a class="social-icon__link" href="https://www.facebook.com/">
+                <ion-icon name="logo-facebook"></ion-icon>
+            </a></li>
+        <li class="social-icon__item"><a class="social-icon__link"
+                href="https://twitter.com/i/flow/login?redirect_after_login=%2F%3Flang%3Den-in">
+                <ion-icon name="logo-twitter"></ion-icon>
+            </a></li>
+        <li class="social-icon__item"><a class="social-icon__link" href="https://www.linkedin.com/login">
+                <ion-icon name="logo-linkedin"></ion-icon>
+            </a></li>
+        <li class="social-icon__item"><a class="social-icon__link"
+                href="https://www.bing.com/ck/a?!&&p=5880945f0b29cf1cJmltdHM9MTY5MDQxNjAwMCZpZ3VpZD0wOTE4NGYxMC03ZWNkLTYzY2ItMmQ3ZC01ZDQyN2YzZjYyMTEmaW5zaWQ9NTE5OQ&ptn=3&hsh=3&fclid=09184f10-7ecd-63cb-2d7d-5d427f3f6211&psq=instagram&u=a1aHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbS8&ntb=1">
+                <ion-icon name="logo-instagram"></ion-icon>
+            </a></li>
+    </ul>
+    <ul class="menu">
+        <li class="menu__item"><a class="menu__link" href="#">Home</a></li>
+        <li class="menu__item"><a class="menu__link" href="#">About</a></li>
+        <li class="menu__item"><a class="menu__link" href="#">Services</a></li>
+        <li class="menu__item"><a class="menu__link" href="#">Team</a></li>
+        <li class="menu__item"><a class="menu__link" href="#">Contact</a></li>
+
+    </ul>
+    <p>&copy;2024 Diya Mahajan | All Rights Reserved</p>
+</footer>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
+
+</footer>
+
+</html> 
